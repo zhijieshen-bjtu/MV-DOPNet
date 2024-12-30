@@ -33,3 +33,16 @@ The pre-trained model weights should be placed correctly in the following folder
 ```
 
 **Fine-tune MV-DOPNet with pseudo labels**  
+In this step, we employ the generated pseudo labels to fine-tune the MV-DOPNet.
+
+If you find this work useful, please consider citing the following papers:
+
+```
+@article{shen2024360,
+  title={360 Layout Estimation via Orthogonal Planes Disentanglement and Multi-view Geometric Consistency Perception},
+  author={Shen, Zhijie and Lin, Chunyu and Zhang, Junsong and Nie, Lang and Liao, Kang and Zhao, Yao},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2024},
+  publisher={IEEE}
+}
+```
