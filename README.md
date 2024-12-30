@@ -3,17 +3,16 @@ The project is reproducted based on [PanoFormer](https://github.com/zhijieshen-b
 #Prepare data
 Please prepare the dataset by following the guidelines in [mvl_toolkit](https://github.com/mvlchallenge/mvl_toolkit).  If you have correctly prepared the dataset, the data can be found in the following file:
 
-'''
+```
 
 ../mvl_challenge/assets/zips/ 
 
-''' 
+```
 where includes 5 files: challenge_phase__training_set.zip、challenge_phase__testing_set.zip、pilot_set.zip、warm_up_training_set.zip, and warm_up_testing_set.zip 
 
-''' 
+```
 
 ../mvl_challenge/assets/mvl_data/  
-
-''' 
+```
 
 where includes 3 files: img、labels, and geometry_info 
