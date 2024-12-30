@@ -1,4 +1,4 @@
-Pytorch implementation of ["360 Layout Estimation via Orthogonal Planes Disentanglement and Multi-view Geometric Consistency Perception"](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10634822) (TPAMI'24)  
+Pytorch implementation of [360 layout](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10634822)(TPAMI'24)  
 The project is reproducted based on [DOPNet](https://github.com/zhijieshen-bjtu/DOPNet), [mvl_toolkit](https://github.com/mvlchallenge/mvl_toolkit) and [PanoFormer](https://github.com/zhijieshen-bjtu/PanoFormer). 
 # Prepare datasets
 
