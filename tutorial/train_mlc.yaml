@@ -1,0 +1,66 @@
+pass_args: True # If False, the <Required> below must be specified by user.
+                # Since they won't be set by passing the arguments anymore.
+
+# ! Selecting MVL dataset
+mvl_dir: <Required>
+output_dir: <Required>
+#mvl_dir:       mvl_challenge/assets/data/mvl_data
+#output_dir:    /your/root/path/mvl_challenge/assets/data/mvl_data/labels/
+training_scene_list: <Required>
+testing_scene_list: <Required>
+pilot_scene_list: <Required>
+scene_list: <Required>
+
+ckpt: <Required> 
+id_exp: <Required>
+id_exp_val: <Required>
+
+runners:
+  mvl:
+    data_dir: ${mvl_dir}
+    scene_list: ${training_scene_list}
+    batch_size: 4
+    num_workers: 4
+    max_room_factor_size: 2
+    std_kernel: [30, 10, 5]
+
+  train:
+    data_dir:
+      img_dir: ${mvl_dir}/img
+      labels_dir: ${mvl_dir}/labels/Zind_finetrain/${id_exp}       #找到伪标签
+      ratio_dir: ${mvl_dir}/Zind_geometry_info2
+      ratio_newdir: ${mvl_dir}/Zind_geometry_info2                 #_V4challenge_newiter1
+    label: mlc_label
+    scene_list: ${training_scene_list}
+    size: -1
+    batch_size: 4
+    num_workers: 4
+  
+  valid_iou:
+    data_dir:
+      img_dir: ${mvl_dir}/img
+      pseudo_labels_dir: ${mvl_dir}/labels/Zind_finepilot/${id_exp_val}
+      labels_dir: ${mvl_dir}/labels/
+      ratio_dir: ${mvl_dir}/Zind_geometry_info2
+    scene_list: ${pilot_scene_list}
+    batch_size: 4
+    label: gt
+    pseudo_label: mlc_label
+    size: -1
+    num_workers: 4
+
+model:
+  ly_model: DOPNet
+  ckpt: ${ckpt}
+  optimizer: Adam
+  loss: weighted_L1
+  min_std: 0.001
+  epochs: 25
+  save_every: -1 
+  lr: 0.00005
+  lr_decay_rate: 0.90
+  seed: 594277
+  bn_momentum: 0
+  freeze_earlier_blocks: -1
+  beta1: 0.9
+  weight_decay: 0.0
