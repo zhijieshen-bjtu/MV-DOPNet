@@ -27,3 +27,7 @@ In this step, we employ DOPNet to generate pseudo labels. You may need to modify
 /tutorial/create_mlc_labels.py
 /tutorial/create_mlc_labels.yaml
 ```
+The pre-trained model weights should be placed correctly in the following folder：
+```
+
+```
