@@ -31,3 +31,5 @@ The pre-trained model weights should be placed correctly in the following folder
 ```
 ../mvl_challenge/assets/ckpt/
 ```
+
+**Fine-tune MV-DOPNet with pseudo labels**  
