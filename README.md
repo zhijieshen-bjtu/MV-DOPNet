@@ -21,3 +21,8 @@ where includes 3 files: img、labels, and geometry_info
 If you finish all the work, you can go next!
 
 **Generate pseudo labels**
+In this step, we employ DOPNet to generate pseudo labels. You may need to modify the following file to choose the model and dataset splits, etc.
+
+```
+
+```
