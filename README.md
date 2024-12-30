@@ -24,10 +24,10 @@ If you finish all the work, you can go next!
 In this step, we employ DOPNet to generate pseudo labels. You may need to modify the following file to choose the model, dataset splits, etc.
 
 ```
-/tutorial/create_mlc_labels.py
-/tutorial/create_mlc_labels.yaml
+../tutorial/create_mlc_labels.py
+../tutorial/create_mlc_labels.yaml
 ```
 The pre-trained model weights should be placed correctly in the following folder：
 ```
-
+../mvl_challenge/assets/ckpt/
 ```
