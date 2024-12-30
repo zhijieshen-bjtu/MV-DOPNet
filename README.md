@@ -17,3 +17,7 @@ where includes 5 files: challenge_phase__training_set.zip、challenge_phase__tes
 ```
 
 where includes 3 files: img、labels, and geometry_info 
+
+If you finish all the work, you can go next!
+
+**Generate pseudo labels**
