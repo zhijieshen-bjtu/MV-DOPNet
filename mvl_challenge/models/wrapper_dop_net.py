@@ -171,7 +171,7 @@ class WrapperDOPNet:
     def __init__(self, cfg):
         self.cfg = cfg
         self.set_horizon_net_path()
-        from mvl_challenge.models.HorizonNet.misc import utilsdop as dop_utils
+        from mvl_challenge.models import utilsdop as dop_utils
         from mvl_challenge.models.DOPNet.models.my_layout_net import My_Layout_Net
 
         # ! Setting cuda-device
